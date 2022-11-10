@@ -1,5 +1,5 @@
 import { GET_HOME_DATA_REQUEST } from "./consts";
 
-export const getAnimalData = () => ({
-type: GET_HOME_DATA_REQUEST,
+export const getHomeData = () => ({
+type: GET_HOME_DATA_REQUEST
 })

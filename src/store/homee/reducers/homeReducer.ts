@@ -1,16 +1,16 @@
 import * as types from "../consts"
 
 export const initialState = {
-    homeDataResponse: {}
+    homeDataResponse: []
 }
 
-export default function homeReducer(state = initialState, action: any) {
+export default function homeReducer(state = [], action: any) {
     switch( action.type) {
         case types.GET_HOME_DATA_REQUEST: {
             return {...state}
         }
         case types.GET_HOME_DATA_SUCCESS: {
-            return {...state, homeDataResponse: action.response}
+            return {...state, homeDataResponse: action.homeResponse}
         }
         case types.GET_HOME_DATA_ERROR: {
             return {...state, errorMsg: "some errors"}
